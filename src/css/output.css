@@ -625,6 +625,10 @@ body {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
@@ -647,10 +651,6 @@ body {
   width: fit-content;
 }
 
-.w-\[240px\] {
-  width: 240px;
-}
-
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -665,10 +665,6 @@ body {
 
 .items-center {
   align-items: center;
-}
-
-.justify-end {
-  justify-content: flex-end;
 }
 
 .justify-center {
@@ -809,15 +805,6 @@ body {
   line-height: 1rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-\[24px\] {
-  font-size: 24px;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -912,9 +899,19 @@ body {
   opacity: 1;
 }
 
+@media (min-width: 640px) {
+  .sm\:hidden {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:top-\[96px\] {
     top: 96px;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:size-8 {
@@ -928,14 +925,6 @@ body {
 
   .md\:w-\[240px\] {
     width: 240px;
-  }
-
-  .md\:w-\[2400px\] {
-    width: 2400px;
-  }
-
-  .md\:justify-center {
-    justify-content: center;
   }
 
   .md\:gap-16 {
@@ -990,76 +979,43 @@ body {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-
-  .md\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
-  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+
   .lg\:hidden {
     display: none;
-  }
-
-  .lg\:w-\[320px\] {
-    width: 320px;
-  }
-
-  .lg\:w-1\/2 {
-    width: 50%;
-  }
-
-  .lg\:w-\[400px\] {
-    width: 400px;
-  }
-
-  .lg\:w-\[480px\] {
-    width: 480px;
-  }
-
-  .lg\:w-\[300px\] {
-    width: 300px;
-  }
-
-  .lg\:w-\[240px\] {
-    width: 240px;
-  }
-
-  .lg\:w-\[280px\] {
-    width: 280px;
-  }
-
-  .lg\:w-\[250px\] {
-    width: 250px;
-  }
-
-  .lg\:w-\[248px\] {
-    width: 248px;
-  }
-
-  .lg\:w-\[245px\] {
-    width: 245px;
-  }
-
-  .lg\:w-\[244px\] {
-    width: 244px;
   }
 
   .lg\:w-\[243px\] {
     width: 243px;
   }
 
-  .lg\:p-16 {
-    padding: 4rem;
+  .lg\:w-\[480px\] {
+    width: 480px;
   }
 
-  .lg\:p-12 {
-    padding: 3rem;
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
+  .lg\:justify-center {
+    justify-content: center;
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
   }
 
   .lg\:p-10 {
     padding: 2.5rem;
+  }
+
+  .lg\:p-12 {
+    padding: 3rem;
   }
 
   .lg\:text-9xl {
